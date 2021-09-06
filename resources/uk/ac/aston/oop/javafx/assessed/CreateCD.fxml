@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Label text="Title:" />
+            <TextField fx:id="inputTitle" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Label text="Artist:" />
+            <TextField fx:id="inputArtist" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <CheckBox fx:id="owned" alignment="CENTER" mnemonicParsing="false" text="Own" />
+      <Label fx:id="playTime" text="Playing time: X" />
+      <Slider fx:id="sliderPT" blockIncrement="15.0" majorTickUnit="60.0" max="360.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" VBox.vgrow="NEVER">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Slider>
+      <Label fx:id="numTracks" text="Number of tracks: N" />
+      <Slider fx:id="sliderNT" blockIncrement="1.0" majorTickUnit="5.0" max="40.0" minorTickCount="4" showTickLabels="true" showTickMarks="true" snapToTicks="true" VBox.vgrow="NEVER">
+         <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </VBox.margin>
+      </Slider>
+      <HBox alignment="BOTTOM_CENTER" spacing="5.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button mnemonicParsing="false" onAction="#createPressed" text="Create" />
+            <Button mnemonicParsing="false" onAction="#cancelPressed" text="Cancel" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
